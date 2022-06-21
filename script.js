@@ -37,7 +37,7 @@ function drawGrid(gridSize)
     items = document.querySelectorAll('.item');
     items.forEach((item) => {
         item.addEventListener('mouseenter', () => {
-            item.style.backgroundColor = 'red';
+            item.style.backgroundColor = random_rgba();
         });
     })
     
@@ -45,4 +45,9 @@ function drawGrid(gridSize)
 
 function removeGrid() {
     document.querySelectorAll('.item').forEach((item) => container.removeChild(item));
+}
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
