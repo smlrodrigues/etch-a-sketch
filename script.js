@@ -5,6 +5,22 @@ let items;
 
 drawGrid(gridSize);
 
+const buttonNumSquares = document.querySelector('#btnNumberSquares');
+
+buttonNumSquares.addEventListener('click', () => {
+    let currentSizeGrid = prompt('Number of Squares', 0);
+    
+    if(!isNaN(currentSizeGrid) && currentSizeGrid > 0 && currentSizeGrid <= 100)
+    {
+        removeGrid();
+        drawGrid(currentSizeGrid);
+    }
+    else
+    {
+        alert('ERROR');
+    }
+});
+
 
 function drawGrid(gridSize)
 {
