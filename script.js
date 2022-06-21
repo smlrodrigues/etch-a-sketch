@@ -26,3 +26,7 @@ function drawGrid(gridSize)
     })
     
 }
+
+function removeGrid() {
+    document.querySelectorAll('.item').forEach((item) => container.removeChild(item));
+}
