@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+    background-color: rgb(169, 169, 169);
+}
+
+.item {
+    width: 20px;
+}
+
+#btnNumberSquares {
+    padding: 10px 20px;
+}
